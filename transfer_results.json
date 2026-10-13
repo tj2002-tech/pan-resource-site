@@ -3,64 +3,64 @@
   "source": "用户手动转存 + 从绑任推邦账号重新生成分享链接（已剥离上游推广微信 jiewu2026）",
   "platform": "baidu",
   "account_uk": "1100639949917",
-  "site_contact": "【替换为你的微信号】",
-  "notes": "含无人直播、协议挂机类高风险内容；公开分发前请用户自行评估合规风险。提取码随链接一并展示。",
+  "site_contact": "jiewu2026",
+  "notes": "已按用户决策移除游戏灰产条目（战役总动员协议挂机）；公开分发内容为教程类为主。提取码随链接一并展示，status 字段由 check_links.py 维护（ok/dead/unknown）。",
   "results": [
     {
       "title": "美女五人组跳舞无人直播",
       "category": "无人直播",
       "risk": "high",
       "url": "https://pan.baidu.com/s/1Yfck5cHxbQXXcylIb1zS9w?pwd=czxa",
-      "code": "czxa"
+      "code": "czxa",
+      "status": "ok"
     },
     {
       "title": "抖音无人美女直播！第三视角小游戏",
       "category": "无人直播",
       "risk": "high",
       "url": "https://pan.baidu.com/s/1P0VqfNHzXF5_CVviGTkKPA?pwd=cmuv",
-      "code": "cmuv"
-    },
-    {
-      "title": "战役总动员全自动答题项目（协议挂机脚本+教程）",
-      "category": "游戏/灰产",
-      "risk": "high",
-      "url": "https://pan.baidu.com/s/1Fj2fMMi6BIRux-Ne8CS-pg?pwd=quj7",
-      "code": "quj7"
+      "code": "cmuv",
+      "status": "ok"
     },
     {
       "title": "支付宝无人直播！OBS转播带货直播间",
       "category": "无人直播",
       "risk": "high",
       "url": "https://pan.baidu.com/s/1UMUzIIHYnK4Tep-0TjXFZA?pwd=psd6",
-      "code": "psd6"
+      "code": "psd6",
+      "status": "ok"
     },
     {
       "title": "AI口罩美女生成教程",
       "category": "AI短视频教程",
       "risk": "low",
       "url": "https://pan.baidu.com/s/1hszsE6y_QKGAsw7n2vmf2A?pwd=bqq8",
-      "code": "bqq8"
+      "code": "bqq8",
+      "status": "ok"
     },
     {
       "title": "【怀旧新娘】无人直播整蛊互动玩法",
       "category": "无人直播",
       "risk": "high",
       "url": "https://pan.baidu.com/s/1pxLYAtK2pjCC9Q7Zh9XAwg?pwd=psrj",
-      "code": "psrj"
+      "code": "psrj",
+      "status": "ok"
     },
     {
       "title": "制作乡愁视频，月入2万+工作室可批量操作",
       "category": "短视频教程",
       "risk": "low",
       "url": "https://pan.baidu.com/s/1zpl4dBcwmIhJ23hzhPadqg?pwd=kquf",
-      "code": "kquf"
+      "code": "kquf",
+      "status": "ok"
     },
     {
       "title": "蓝海信息差项目",
       "category": "信息差副业",
       "risk": "low",
       "url": "https://pan.baidu.com/s/1QSShGkQH-SvDBFvZkDJgKw?pwd=qq66",
-      "code": "qq66"
+      "code": "qq66",
+      "status": "ok"
     }
   ]
 }

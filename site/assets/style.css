@@ -20,10 +20,16 @@ body{font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei"
 .tag{background:var(--tag);color:var(--muted);font-size:12px;padding:2px 8px;border-radius:20px;white-space:nowrap}
 .code{font-size:14px;color:var(--muted)}
 .code b{color:var(--fg);letter-spacing:1px}
+.tag-ok{background:#1d3327;color:#4ade80}
+.tag-dead{background:#3a2226;color:#f87171}
+.card.dead{opacity:.55;border-color:#3a2226}
+.btn-disabled{margin-top:auto;display:inline-block;text-align:center;background:#3a2f33;color:#c99;padding:9px 12px;border-radius:8px;font-size:14px}
 .btn{margin-top:auto;display:inline-block;text-align:center;background:var(--accent);color:#fff;text-decoration:none;padding:9px 12px;border-radius:8px;font-size:14px}
 .btn:hover{opacity:.9}
-.contact{background:var(--card);border:1px solid #222;border-radius:12px;padding:20px;margin:30px 0}
+.contact{background:var(--card);border:1px solid #222;border-radius:12px;padding:20px;margin:30px 0;text-align:center}
 .contact h2{font-size:18px;margin-bottom:10px}
+.contact .qr{display:block;margin:14px auto 8px;border-radius:10px;border:1px solid #333}
+.contact b{font-size:17px}
 .muted{color:var(--muted);font-size:13px}
 .foot{border-top:1px solid #222;margin-top:30px;padding:20px 0;font-size:13px}
 .foot p{max-width:960px}

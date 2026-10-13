@@ -47,14 +47,28 @@ def build():
         cards = []
         for it in its:
             total += 1
+            status = it.get("status")
+            if status == "dead":
+                badge = '<span class="tag tag-dead">❌ 已失效</span>'
+                card_cls = "card dead"
+                btn = '<span class="btn btn-disabled">链接已失效，等待更新</span>'
+            elif status == "ok":
+                badge = '<span class="tag tag-ok">✅ 有效</span>'
+                card_cls = "card"
+                btn = f'<a class="btn" href="{esc(it["url"])}" target="_blank" rel="noopener">前往网盘转存 / 下载</a>'
+            else:
+                badge = ""
+                card_cls = "card"
+                btn = f'<a class="btn" href="{esc(it["url"])}" target="_blank" rel="noopener">前往网盘转存 / 下载</a>'
             cards.append(f"""
-      <article class="card">
+      <article class="{card_cls}">
         <div class="card-head">
           <h3>{esc(it['title'])}</h3>
+          {badge}
           <span class="tag">{esc(it['category'])}</span>
         </div>
         <div class="code">提取码：<b>{esc(it['code'])}</b></div>
-        <a class="btn" href="{esc(it['url'])}" target="_blank" rel="noopener">前往网盘转存 / 下载</a>
+        {btn}
       </article>""")
         sections.append(f"""
     <section id="cat-{esc(cat)}" class="cat">
@@ -99,7 +113,8 @@ def build():
   <section id="contact" class="contact">
     <h2>联系站长</h2>
     <p>获取更多资源或一对一指导，请加站长微信：<b>{esc(contact)}</b></p>
-    <p class="muted">（资源持续更新，加微信第一时间获取新项目）</p>
+    <img class="qr" src="assets/weixin_qr.jpg" alt="站长微信二维码：{esc(contact)}" width="200" height="200">
+    <p class="muted">（微信扫码直接添加 · 资源持续更新，加微信第一时间获取新项目）</p>
   </section>
 </main>
 
@@ -140,16 +155,28 @@ body{font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei"
 .tag{background:var(--tag);color:var(--muted);font-size:12px;padding:2px 8px;border-radius:20px;white-space:nowrap}
 .code{font-size:14px;color:var(--muted)}
 .code b{color:var(--fg);letter-spacing:1px}
+.tag-ok{background:#1d3327;color:#4ade80}
+.tag-dead{background:#3a2226;color:#f87171}
+.card.dead{opacity:.55;border-color:#3a2226}
+.btn-disabled{margin-top:auto;display:inline-block;text-align:center;background:#3a2f33;color:#c99;padding:9px 12px;border-radius:8px;font-size:14px}
 .btn{margin-top:auto;display:inline-block;text-align:center;background:var(--accent);color:#fff;text-decoration:none;padding:9px 12px;border-radius:8px;font-size:14px}
 .btn:hover{opacity:.9}
-.contact{background:var(--card);border:1px solid #222;border-radius:12px;padding:20px;margin:30px 0}
+.contact{background:var(--card);border:1px solid #222;border-radius:12px;padding:20px;margin:30px 0;text-align:center}
 .contact h2{font-size:18px;margin-bottom:10px}
+.contact .qr{display:block;margin:14px auto 8px;border-radius:10px;border:1px solid #333}
+.contact b{font-size:17px}
 .muted{color:var(--muted);font-size:13px}
 .foot{border-top:1px solid #222;margin-top:30px;padding:20px 0;font-size:13px}
 .foot p{max-width:960px}
 """
     with open(os.path.join(OUT, "assets", "style.css"), "w", encoding="utf-8") as f:
         f.write(css)
+
+    # 复制微信二维码（如存在）
+    qr_src = os.path.join(BASE, "weixin_qr.jpg")
+    if os.path.exists(qr_src):
+        import shutil
+        shutil.copy2(qr_src, os.path.join(OUT, "assets", "weixin_qr.jpg"))
 
     # robots + sitemap
     with open(os.path.join(OUT, "robots.txt"), "w", encoding="utf-8") as f:
