@@ -113,7 +113,7 @@ def build():
   <section id="contact" class="contact">
     <h2>联系站长</h2>
     <p>获取更多资源或一对一指导，请加站长微信：<b>{esc(contact)}</b></p>
-    <img class="qr" src="assets/weixin_qr.jpg" alt="站长微信二维码：{esc(contact)}" width="200" height="200">
+    <img class="qr" src="assets/weixin_qr.jpg" alt="站长微信二维码：{esc(contact)}">
     <p class="muted">（微信扫码直接添加 · 资源持续更新，加微信第一时间获取新项目）</p>
   </section>
 </main>
@@ -163,7 +163,7 @@ body{font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei"
 .btn:hover{opacity:.9}
 .contact{background:var(--card);border:1px solid #222;border-radius:12px;padding:20px;margin:30px 0;text-align:center}
 .contact h2{font-size:18px;margin-bottom:10px}
-.contact .qr{display:block;margin:14px auto 8px;border-radius:10px;border:1px solid #333}
+.contact .qr{display:block;margin:14px auto 8px;width:170px;height:auto;border-radius:10px;border:1px solid #333;box-shadow:0 2px 10px rgba(0,0,0,.35)}
 .contact b{font-size:17px}
 .muted{color:var(--muted);font-size:13px}
 .foot{border-top:1px solid #222;margin-top:30px;padding:20px 0;font-size:13px}
