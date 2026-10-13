@@ -1,6 +1,11 @@
 # 凭证与本地密钥，绝不入库
 secrets/
 
+# 本地测试数据 / 中间产物，不入公开仓库
+inbox/
+extracted_links.json
+transfer_results.json.bak
+
 # Python
 __pycache__/
 *.pyc
