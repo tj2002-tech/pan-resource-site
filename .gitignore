@@ -1,0 +1,7 @@
+# 凭证与本地密钥，绝不入库
+secrets/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
